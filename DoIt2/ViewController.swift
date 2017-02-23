@@ -8,17 +8,42 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+                                    // add TableViewDelegate, and TableViewData Source
+    
+    
+    @IBOutlet weak var tableView1: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+            // seting up DataSource, and Delegate, this is where tableView is asking howmany rows it should have and what goes inside the cells
+        tableView1.dataSource = self
+        
+        tableView1.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   // 2 functions that the tableView need
+    
+    // how many rows should it have?
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
     }
+    
+    // what goes inside the cell
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         // create cell object with properties of UITableViewCell
+        let cell = UITableViewCell()
+        // now cell can me manipulated
+        cell.textLabel?.text = "Hello"
+        
+        return cell
+    }
+    
 
 
 }
