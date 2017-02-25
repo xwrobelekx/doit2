@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TasksViewController.swift
 //  DoIt2
 //
 //  Created by Kamil Wrobel on 2/23/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                     // add TableViewDelegate, and TableViewData Source
     
     
@@ -89,7 +89,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! CreateTaskViewController
+        nextVC.previousVC = self
+        
+        // were created a constant called nextVC which destination is in CreateTaskVC, then we can acces properties from CTVC, so we said nextVC.PreviousVC is the same thing
+        // this alows us to create task in CTVC and assign it in TVC
+        
+    }
     
 
 
