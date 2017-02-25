@@ -47,11 +47,30 @@
                     <connections>
                         <outlet property="tableView1" destination="V4V-yg-Usb" id="hJF-Nd-Les"/>
                         <segue destination="H0B-oi-HRv" kind="show" identifier="addSegue" id="RLu-ui-VZT"/>
+                        <segue destination="Bat-lh-VYV" kind="show" identifier="selectTaskSegue" id="LvU-Yu-pyM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="975.20000000000005" y="38.23088455772114"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3Gj-AN-8KL">
+            <objects>
+                <viewController id="Bat-lh-VYV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xMi-Sp-Dq5"/>
+                        <viewControllerLayoutGuide type="bottom" id="9En-oV-vws"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ob9-cm-3aB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zxe-Qv-NmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="795"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="yIg-fh-f2b">

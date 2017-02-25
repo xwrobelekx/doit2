@@ -64,6 +64,16 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+            // what happens when we press on a cell (row)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let task = tasks[indexPath.row]
+            // created task object
+        performSegue(withIdentifier: "selectTaskSegue", sender: task)
+            //sending task object thru sender in segue " selectTask Segue"
+        
+    }
+    
     // function that creates some exaple tasks
     
     func makeTasks() -> [Task] {
