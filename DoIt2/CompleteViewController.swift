@@ -16,7 +16,9 @@ class CompleteViewController: UIViewController {
     var task = Task()
         // created new property of type Task
 
-    
+    var previousVC = TasksViewController()
+        //property that give as acces to TaskVC
+    // this holds TasksVC which gone let us comunicate between view controllers
     
 
     override func viewDidLoad() {
@@ -39,7 +41,14 @@ class CompleteViewController: UIViewController {
     
     @IBAction func completeTapped2(_ sender: Any) {
         
+        previousVC.tasks.remove(at: previousVC.selectedIndex)
         
+        //  now when we tap Complete, and by setting up the comunication between VC's we can delete selected task.
+        
+        previousVC.tableView1.reloadData()
+        
+        navigationController!.popViewController(animated: true)
+        // this line of code (when add is tapped) brings us back to pevious VC (TasksVC)
         
     }
 

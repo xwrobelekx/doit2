@@ -14,7 +14,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var tableView1: UITableView!
     
-    
+    var selectedIndex = 0
 
     
     var tasks : [Task] = []
@@ -67,6 +67,9 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             // what happens when we press on a cell (row)
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        selectedIndex = indexPath.row
+            // this line of code tell as where in the array is the item that we tapped (selected)
+        
         let task = tasks[indexPath.row]
             // created task object
         performSegue(withIdentifier: "selectTaskSegue", sender: task)
@@ -116,6 +119,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             nextVC.task = sender as! Task
                 //this line of code specifies that the new task that were sending in is of type Task, this is because the prepare for segue taked any type of sender, and here were specyfing it.
             
+            nextVC.previousVC = self
+                // CompleteVC has a property called previousVC which is assigned to TaskVC, and here were letting them to comunicate between each other, and therefore, were gone be able to delete (complete) tasks
             
         }
         // when calling the segue, the if statement checks which segue was called and executes coresponding code
