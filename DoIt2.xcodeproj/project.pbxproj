@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8412A59A1E611DF1002A8DFC /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412A5991E611DF1002A8DFC /* CreateTaskViewController.swift */; };
+		8412A59C1E61306F002A8DFC /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412A59B1E61306F002A8DFC /* CompleteViewController.swift */; };
 		8494E6061E5F53DE00E86380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494E6051E5F53DE00E86380 /* AppDelegate.swift */; };
 		8494E6081E5F53DE00E86380 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494E6071E5F53DE00E86380 /* TasksViewController.swift */; };
 		8494E60B1E5F53DE00E86380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8494E6091E5F53DE00E86380 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		8412A5991E611DF1002A8DFC /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		8412A59B1E61306F002A8DFC /* CompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
 		8494E6021E5F53DE00E86380 /* DoIt2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoIt2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8494E6051E5F53DE00E86380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8494E6071E5F53DE00E86380 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				8494E6051E5F53DE00E86380 /* AppDelegate.swift */,
 				8494E6071E5F53DE00E86380 /* TasksViewController.swift */,
 				8412A5991E611DF1002A8DFC /* CreateTaskViewController.swift */,
+				8412A59B1E61306F002A8DFC /* CompleteViewController.swift */,
 				8494E61A1E5F59D900E86380 /* Task.swift */,
 				8494E6091E5F53DE00E86380 /* Main.storyboard */,
 				8494E60F1E5F53DE00E86380 /* Assets.xcassets */,
@@ -150,6 +153,7 @@
 				8494E60E1E5F53DE00E86380 /* DoIt2.xcdatamodeld in Sources */,
 				8494E6061E5F53DE00E86380 /* AppDelegate.swift in Sources */,
 				8412A59A1E611DF1002A8DFC /* CreateTaskViewController.swift in Sources */,
+				8412A59C1E61306F002A8DFC /* CompleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

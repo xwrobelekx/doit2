@@ -100,12 +100,25 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "addSegue" {
         let nextVC = segue.destination as! CreateTaskViewController
         nextVC.previousVC = self
         
         // were created a constant called nextVC which destination is in CreateTaskVC, then we can acces properties from CTVC, so we said nextVC.PreviousVC is the same thing
         // this alows us to create task in CTVC and assign it in TVC
         
+        }
+        
+        if segue.identifier == "selectTaskSegue" {
+            let nextVC = segue.destination as! CompleteViewController
+                // created new property  called nextVC and assigned its destination as CompleteVC
+            nextVC.task = sender as! Task
+                //this line of code specifies that the new task that were sending in is of type Task, this is because the prepare for segue taked any type of sender, and here were specyfing it.
+            
+            
+        }
+        // when calling the segue, the if statement checks which segue was called and executes coresponding code
     }
     
 
