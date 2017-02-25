@@ -10,29 +10,37 @@ import UIKit
 
 class CompleteViewController: UIViewController {
     
+    
+    @IBOutlet weak var completeLabel1: UILabel!
+    
     var task = Task()
         // created new property of type Task
+
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if task.important {
+            completeLabel1.text = "❗️\(task.name)"
+        } else {
+            completeLabel1.text = task.name
+            
+        }
+        // if statement checks wheather the wsak is important or not, and if it is it assigns the ❗️in front of it.
+        
+        
+        
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func completeTapped2(_ sender: Any) {
+        
+        
+        
     }
-    */
 
 }

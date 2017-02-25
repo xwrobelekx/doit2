@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="975.20000000000005" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--Complete View Controller-->
         <scene sceneID="3Gj-AN-8KL">
             <objects>
-                <viewController id="Bat-lh-VYV" sceneMemberID="viewController">
+                <viewController id="Bat-lh-VYV" customClass="CompleteViewController" customModule="DoIt2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xMi-Sp-Dq5"/>
                         <viewControllerLayoutGuide type="bottom" id="9En-oV-vws"/>
@@ -65,12 +65,36 @@
                     <view key="view" contentMode="scaleToFill" id="Ob9-cm-3aB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiE-jf-vZj">
+                                <rect key="frame" x="150" y="84" width="75" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16C-le-rdW">
+                                <rect key="frame" x="154" y="159" width="67" height="30"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeTapped2:" destination="Bat-lh-VYV" eventType="touchUpInside" id="2dW-57-EE0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IiE-jf-vZj" firstAttribute="top" secondItem="xMi-Sp-Dq5" secondAttribute="bottom" constant="20" id="0aj-Hl-D96"/>
+                            <constraint firstItem="IiE-jf-vZj" firstAttribute="centerX" secondItem="Ob9-cm-3aB" secondAttribute="centerX" id="Qvp-GM-q44"/>
+                            <constraint firstItem="16C-le-rdW" firstAttribute="top" secondItem="IiE-jf-vZj" secondAttribute="bottom" constant="38" id="lK1-qR-PDH"/>
+                            <constraint firstItem="16C-le-rdW" firstAttribute="centerX" secondItem="Ob9-cm-3aB" secondAttribute="centerX" id="vb3-nh-fhZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="completeLabel1" destination="IiE-jf-vZj" id="Y0w-Q5-Mvc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxe-Qv-NmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975" y="795"/>
+            <point key="canvasLocation" x="973.60000000000002" y="794.75262368815595"/>
         </scene>
         <!--Create Task View Controller-->
         <scene sceneID="yIg-fh-f2b">
