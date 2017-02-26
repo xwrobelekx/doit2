@@ -14,9 +14,7 @@ class CreateTaskViewController: UIViewController {
     @IBOutlet weak var importantSwitch: UISwitch!
     @IBOutlet weak var taskNameTextField: UITextField!
     
-    var previousVC = TasksViewController()
-    // this holds TasksVC which gone let us comunicate between view controllers
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,13 +38,7 @@ class CreateTaskViewController: UIViewController {
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
             // saves context
         
-        //add a new task to array in previous VC
-        
-        previousVC.tasks.append(task)
-        
-        
-        previousVC.tableView1.reloadData()
-        // reloads the tableView, so when we add new items it will apeear.
+ 
         
         
         navigationController!.popViewController(animated: true)

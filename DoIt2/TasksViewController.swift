@@ -85,16 +85,16 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    // the purpose of this getTasks function is to get everything out of core Data and put it in the tasks array.
+    
+    func getTasks() {
         
-        if segue.identifier == "addSegue" {
-            let nextVC = segue.destination as! CreateTaskViewController
-            nextVC.previousVC = self
-            
-            // were created a constant called nextVC which destination is in CreateTaskVC, then we can acces properties from CTVC, so we said nextVC.PreviousVC is the same thing
-            // this alows us to create task in CTVC and assign it in TVC
-            
-        }
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "selectTaskSegue" {
             let nextVC = segue.destination as! CompleteViewController
