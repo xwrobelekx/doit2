@@ -26,9 +26,19 @@ class CreateTaskViewController: UIViewController {
     @IBAction func addTapped(_ sender: Any) {
         
         // create task from the outlet information
-        let task = Task()
+        
+        let context25 = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            //this gives as acces to propertirs in AppDelegate, and were using persistent Container property, which holds objects in Core Data
+        
+        let task = Task(context: context25)
+            // replaced Task() with Task from entity, and is looking now for NSManagedObjectContext
+            //
+        
         task.name = taskNameTextField.text!
         task.important = importantSwitch.isOn
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            // saves context
         
         //add a new task to array in previous VC
         

@@ -15,7 +15,6 @@
 		8494E60E1E5F53DE00E86380 /* DoIt2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8494E60C1E5F53DE00E86380 /* DoIt2.xcdatamodeld */; };
 		8494E6101E5F53DE00E86380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8494E60F1E5F53DE00E86380 /* Assets.xcassets */; };
 		8494E6131E5F53DE00E86380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8494E6111E5F53DE00E86380 /* LaunchScreen.storyboard */; };
-		8494E61B1E5F59D900E86380 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8494E61A1E5F59D900E86380 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		8494E60F1E5F53DE00E86380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8494E6121E5F53DE00E86380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8494E6141E5F53DE00E86380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8494E61A1E5F59D900E86380 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 				8494E6071E5F53DE00E86380 /* TasksViewController.swift */,
 				8412A5991E611DF1002A8DFC /* CreateTaskViewController.swift */,
 				8412A59B1E61306F002A8DFC /* CompleteViewController.swift */,
-				8494E61A1E5F59D900E86380 /* Task.swift */,
 				8494E6091E5F53DE00E86380 /* Main.storyboard */,
 				8494E60F1E5F53DE00E86380 /* Assets.xcassets */,
 				8494E6111E5F53DE00E86380 /* LaunchScreen.storyboard */,
@@ -148,7 +145,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8494E61B1E5F59D900E86380 /* Task.swift in Sources */,
 				8494E6081E5F53DE00E86380 /* TasksViewController.swift in Sources */,
 				8494E60E1E5F53DE00E86380 /* DoIt2.xcdatamodeld in Sources */,
 				8494E6061E5F53DE00E86380 /* AppDelegate.swift in Sources */,

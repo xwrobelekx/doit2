@@ -25,7 +25,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         
         
-        tasks = makeTasks()
+      
         
         
         // seting up DataSource, and Delegate, this is where tableView is asking howmany rows it should have and what goes inside the cells
@@ -77,24 +77,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-    // function that creates some exaple tasks
-    
-    func makeTasks() -> [Task] {
-        let task1 = Task()
-        task1.name = "ggg"
-        task1.important = false
-        
-        let task2 = Task()
-        task2.name = "hhhh"
-        task2.important = true
-        
-        let task3 = Task()
-        task3.name = "kkk"
-        task3.important = false
-        
-        return [task1, task2, task3]
-        
-    }
+
     // added action for the plus button
     @IBAction func plusTapped(_ sender: Any) {
         // performs a segue to the next view controller
