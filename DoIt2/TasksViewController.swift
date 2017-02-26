@@ -20,7 +20,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var tasks : [Task] = []
     // property for viewController that holds all the things drom create tasks function
     
-    
+    //view did load gets called only one time when the app is loading, where view will apppear gets called everytime were going back to that view
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +33,15 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         tableView1.delegate = self
     }
+     // view will appear notifies view controller that its view is about to be added to view hierarchy
+    // this function gets called everytime your view is about to appear, wheather your starting the app, or coming back from differend view
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getTasks()
+    }
+    
+    
+    
     
     // 2 functions that the tableView need
     
@@ -89,10 +98,22 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // the purpose of this getTasks function is to get everything out of core Data and put it in the tasks array.
     
     func getTasks() {
+          let context25 = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                    // creates context property by accessing AppDelegate property persistent Container
+        do {
+            
         
+        tasks = try context25.fetch(Task.fetchRequest()) as! [Task]
+            // fetch gives us back an array of objects, then we need to specyfi what kinf od object, and request the fetch
+            
+            print(tasks)
+            // fetch may throw an error, so we need to do the  "do, try, catch thing" to prevent or handle those errors
+        
+        } catch {
+            print("we have an error")
+        }
+    
     }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
