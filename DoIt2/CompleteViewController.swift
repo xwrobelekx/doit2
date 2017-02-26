@@ -10,45 +10,42 @@ import UIKit
 
 class CompleteViewController: UIViewController {
     
-    
     @IBOutlet weak var completeLabel1: UILabel!
     
-    var task = Task()
+    var task : Task? = nil
+   // var task = Task()
         // created new property of type Task
+    // new property of type Task optional that initially is set to nil
 
-    var previousVC = TasksViewController()
-        //property that give as acces to TaskVC
-    // this holds TasksVC which gone let us comunicate between view controllers
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if task.important {
-            completeLabel1.text = "❗️\(task.name)"
+        if task!.important {
+            completeLabel1.text = "❗️\(task!.name!)"
         } else {
-            completeLabel1.text = task.name
+            completeLabel1.text = task!.name!
             
         }
         // if statement checks wheather the wsak is important or not, and if it is it assigns the ❗️in front of it.
-        
-        
-        
-        
-        
     }
 
     
     @IBAction func completeTapped2(_ sender: Any) {
         
-        previousVC.tasks.remove(at: previousVC.selectedIndex)
-        
-        //  now when we tap Complete, and by setting up the comunication between VC's we can delete selected task.
-        
-        previousVC.tableView1.reloadData()
+          let context25 = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        // creates context property
+        context25.delete(task!)
+        //deletes object (selected task)
+          (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        // saves changes back to core Data
         
         navigationController!.popViewController(animated: true)
         // this line of code (when add is tapped) brings us back to pevious VC (TasksVC)
+        
+        
+        
+        
         
     }
 

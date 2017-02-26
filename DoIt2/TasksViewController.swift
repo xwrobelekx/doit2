@@ -14,9 +14,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var tableView1: UITableView!
     
-    var selectedIndex = 0
-    
-    
     var tasks : [Task] = []
     // property for viewController that holds all the things drom create tasks function
     
@@ -24,10 +21,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-      
-        
-        
+    
         // seting up DataSource, and Delegate, this is where tableView is asking howmany rows it should have and what goes inside the cells
         tableView1.dataSource = self
         
@@ -38,9 +32,10 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewWillAppear(_ animated: Bool) {
         getTasks()
+        
+        tableView1.reloadData()
+        //reloads the data, so then something is added, it imidietley apperas in the VC
     }
-    
-    
     
     
     // 2 functions that the tableView need
@@ -61,9 +56,9 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // this give you task object
         
         if task.important {
-            cell.textLabel?.text = "❗️\(task.name)"
+            cell.textLabel?.text = "❗️\(task.name!)"
         } else {
-            cell.textLabel?.text = task.name
+            cell.textLabel?.text = task.name!
             // replaced the string hello with task.name
         }
         // if statement checks wheather the wsak is important or not, and if it is it assigns the ❗️in front of it.
@@ -75,9 +70,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // what happens when we press on a cell (row)
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        selectedIndex = indexPath.row
-        // this line of code tell as where in the array is the item that we tapped (selected)
         
         let task = tasks[indexPath.row]
         // created task object
@@ -120,11 +112,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if segue.identifier == "selectTaskSegue" {
             let nextVC = segue.destination as! CompleteViewController
             // created new property  called nextVC and assigned its destination as CompleteVC
-            nextVC.task = sender as! Task
+            nextVC.task = sender as? Task
             //this line of code specifies that the new task that were sending in is of type Task, this is because the prepare for segue taked any type of sender, and here were specyfing it.
-            
-            nextVC.previousVC = self
-            // CompleteVC has a property called previousVC which is assigned to TaskVC, and here were letting them to comunicate between each other, and therefore, were gone be able to delete (complete) tasks
             
         }
         // when calling the segue, the if statement checks which segue was called and executes coresponding code
