@@ -18,8 +18,6 @@ class CreateTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
     }
     @IBAction func addTapped(_ sender: Any) {
         
@@ -37,9 +35,7 @@ class CreateTaskViewController: UIViewController {
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
             // saves context
-        
- 
-        
+    
         
         navigationController!.popViewController(animated: true)
         // this line of code (when add is tapped) brings us back to pevious VC (TasksVC)

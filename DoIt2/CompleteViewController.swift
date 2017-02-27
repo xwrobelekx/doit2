@@ -43,10 +43,6 @@ class CompleteViewController: UIViewController {
         navigationController!.popViewController(animated: true)
         // this line of code (when add is tapped) brings us back to pevious VC (TasksVC)
         
-        
-        
-        
-        
     }
 
 }
